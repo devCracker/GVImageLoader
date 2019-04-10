@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GVImageLoader_Example' do
+  pod 'GVImageLoader', :path => '../'
+
+  target 'GVImageLoader_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
