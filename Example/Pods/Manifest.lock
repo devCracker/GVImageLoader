@@ -1,0 +1,16 @@
+PODS:
+  - GVImageLoader (0.1.0)
+
+DEPENDENCIES:
+  - GVImageLoader (from `../`)
+
+EXTERNAL SOURCES:
+  GVImageLoader:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GVImageLoader: 350ae457aa917918d60ac1ad385fdb67f203690b
+
+PODFILE CHECKSUM: e48bf6531243e650731e17ff15aec2d1e5a83541
+
+COCOAPODS: 1.5.3

@@ -15,6 +15,13 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7C4A5DE427CB8696A35F34D6 /* Pods_GVImageLoader_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37CD7E4BDCFD7E3DE8292FF /* Pods_GVImageLoader_Example.framework */; };
+		AF9CED5A226328FA00220818 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CED58226328FA00220818 /* CollectionViewCell.swift */; };
+		AF9CED5B226328FA00220818 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9CED59226328FA00220818 /* CollectionViewCell.xib */; };
+		AF9CED5E22632AF900220818 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CED5D22632AF900220818 /* CollectionViewLayout.swift */; };
+		AF9CED6122632CBB00220818 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CED6022632CBB00220818 /* ProfileData.swift */; };
+		AF9CED6422632DE200220818 /* ProfileDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9CED6322632DE200220818 /* ProfileDataSource.swift */; };
+		AF9F2E1B226345F9007489F3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2E1A226345F9007489F3 /* User.swift */; };
+		AF9F2E1D22634626007489F3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9F2E1C22634626007489F3 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +50,17 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		88F6EAAF8ECEA7C1E2BF9BEE /* Pods-GVImageLoader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GVImageLoader_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GVImageLoader_Example/Pods-GVImageLoader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		96E75F771B52BFC2FC40217B /* GVImageLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GVImageLoader.podspec; path = ../GVImageLoader.podspec; sourceTree = "<group>"; };
-		AB4ACF622C2F76A8F46A472C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		96E75F771B52BFC2FC40217B /* GVImageLoader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GVImageLoader.podspec; path = ../GVImageLoader.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB4ACF622C2F76A8F46A472C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		AF9CED58226328FA00220818 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AF9CED59226328FA00220818 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		AF9CED5D22632AF900220818 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
+		AF9CED6022632CBB00220818 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
+		AF9CED6322632DE200220818 /* ProfileDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataSource.swift; sourceTree = "<group>"; };
+		AF9F2E1A226345F9007489F3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF9F2E1C22634626007489F3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B37CD7E4BDCFD7E3DE8292FF /* Pods_GVImageLoader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GVImageLoader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7DF2B1F22FF668545838F73 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D7DF2B1F22FF668545838F73 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,10 @@
 		607FACD21AFB9204008FA782 /* Example for GVImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				AF9CED6222632DD400220818 /* DataManager */,
+				AF9CED5F22632C7800220818 /* Model */,
+				AF9CED5C22632AE100220818 /* Layout */,
+				AF9CED57226328DE00220818 /* CollectionViewCell */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -157,6 +175,41 @@
 				092A517EBC50292FB01136C0 /* Pods_GVImageLoader_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF9CED57226328DE00220818 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CED58226328FA00220818 /* CollectionViewCell.swift */,
+				AF9CED59226328FA00220818 /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AF9CED5C22632AE100220818 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CED5D22632AF900220818 /* CollectionViewLayout.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		AF9CED5F22632C7800220818 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CED6022632CBB00220818 /* ProfileData.swift */,
+				AF9F2E1A226345F9007489F3 /* User.swift */,
+				AF9F2E1C22634626007489F3 /* Image.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF9CED6222632DD400220818 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF9CED6322632DE200220818 /* ProfileDataSource.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +300,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				AF9CED5B226328FA00220818 /* CollectionViewCell.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +377,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				AF9F2E1D22634626007489F3 /* Image.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				AF9CED5E22632AF900220818 /* CollectionViewLayout.swift in Sources */,
+				AF9CED6122632CBB00220818 /* ProfileData.swift in Sources */,
+				AF9CED5A226328FA00220818 /* CollectionViewCell.swift in Sources */,
+				AF9CED6422632DE200220818 /* ProfileDataSource.swift in Sources */,
+				AF9F2E1B226345F9007489F3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -456,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -470,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GVImageLoader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -485,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GVImageLoader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

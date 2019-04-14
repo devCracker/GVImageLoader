@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xI6-MJ-vq8">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GVImageLoder Demo-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GVImageLoader_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +20,53 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XrM-x2-QRt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="ouu-Kd-sZn" customClass="CollectionViewLayout" customModule="GVImageLoader_Example" customModuleProvider="target"/>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="neT-2b-U6r"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="auu-rQ-KCs"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="XrM-x2-QRt" secondAttribute="bottom" id="Zf0-39-UG0"/>
+                            <constraint firstAttribute="trailing" secondItem="XrM-x2-QRt" secondAttribute="trailing" id="bkw-8H-g2E"/>
+                            <constraint firstItem="XrM-x2-QRt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="c1E-gC-i2E"/>
+                            <constraint firstItem="XrM-x2-QRt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="mPi-9W-tgx"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="GVImageLoder Demo" id="4bQ-4o-AEt"/>
+                    <connections>
+                        <outlet property="collectionView" destination="XrM-x2-QRt" id="FmI-9X-8gR"/>
+                        <outlet property="collectionViewLayout" destination="ouu-Kd-sZn" id="6BU-Iq-U1b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="207" y="141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tnR-Aq-9Gk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xI6-MJ-vq8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X6y-u5-EWn">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Beo-LJ-RTx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6wT-LH-n6j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="-670.61469265367316"/>
         </scene>
     </scenes>
 </document>
