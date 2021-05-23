@@ -22,7 +22,7 @@ pod 'GVImageLoader'
 
 ## Author
 
-venkat, venkat4droid@gmail.com
+devCracker
 
 ## License
 
